@@ -1,0 +1,15 @@
+Q: Hashing for anonymity- I'm not totally familiar with this- what's the benefit of this over erasure?
+Possible A: Equality checks are still possible on the data. Original data can be traced back to the anonymised hashed data.
+    However, the anonymity offered is limited, original data can often be recovered from datasets with hashed anonymization.
+    So perhaps just total replacement of the personal data would be best.
+
+
+If we want to update old product info when we receive a newer version, we can do this by maintaining a key-value store, eg we can put it in a dict, or if needed, into redis.
+We might also end up loading it into a RDBMS and doing the updates there.
+I have skipped this since there's currently no requirement to do so.
+
+Possible next step- use pySpark for streaming input into the etl process.
+
+Could make customer 'last_change' into a datetime.
+
+# TODO support continuous processing, rather than batch reading
